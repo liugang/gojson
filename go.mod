@@ -3,7 +3,6 @@ module github.com/liugang/gojson
 go 1.18
 
 require (
-	github.com/ChimeraCoder/gojson v1.1.0
 	github.com/spf13/cobra v1.8.1
 	gopkg.in/yaml.v3 v3.0.1
 )

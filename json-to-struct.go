@@ -4,7 +4,7 @@
 //
 // Example:
 //
-//	curl -s https://api.github.com/repos/chimeracoder/gojson | gojson -name=Repository
+//	curl -s https://api.github.com/repos/liugang/gojson | gojson -name=Repository
 //
 // Output:
 //

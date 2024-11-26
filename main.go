@@ -29,7 +29,7 @@ var rootCmd = &cobra.Command{
 It reads from stdin or a file and outputs the generated structs to stdout or a file.
 
 Example:
-  curl -s https://api.github.com/repos/chimeracoder/gojson | gojson -name=Repository`,
+  curl -s https://api.github.com/repos/liugang/gojson | gojson -name=Repository`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		// Validate fileType
 		if fileType == "" && inputFile != "" {

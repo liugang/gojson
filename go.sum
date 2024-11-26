@@ -1,5 +1,5 @@
-github.com/ChimeraCoder/gojson v1.1.0 h1:/6S8djl/jColpJGTYniA3xrqJWuKeyEozzPtpr5L4Pw=
-github.com/ChimeraCoder/gojson v1.1.0/go.mod h1:nYbTQlu6hv8PETM15J927yM0zGj3njIldp72UT1MqSw=
+github.com/liugang/gojson v1.1.0 h1:/6S8djl/jColpJGTYniA3xrqJWuKeyEozzPtpr5L4Pw=
+github.com/liugang/gojson v1.1.0/go.mod h1:nYbTQlu6hv8PETM15J927yM0zGj3njIldp72UT1MqSw=
 github.com/cpuguy83/go-md2man/v2 v2.0.4/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
