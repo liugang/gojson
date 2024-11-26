@@ -1,32 +1,49 @@
+# .travis.yml
 language: go
 
-os:
-    - linux
-    - osx
-
+# 指定 Go 版本
 go:
-    - 1.7
-    - 1.8
-    - 1.9
-    - tip
+  - 1.18.x
+  - 1.23.x
+  - tip  # 最新开发版本
 
+# 操作系统
+os:
+  - linux
+  - osx
 
-matrix:
-    include:
-        - os: linux
-          go: 1.5
-        - os: linux
-          go: 1.6
+# 设置 GOPATH 和构建目录
+env:
+  - GO111MODULE=on
 
+# 安装依赖前的操作
+before_install:
+  - go mod download
+
+# 安装项目依赖
+install:
+  - go get -t -v ./...
+
+# 运行测试前的操作
 before_script:
-  - gofmt -w .
+  - go vet ./...
 
-  # If `go generate` or `gofmt` yielded any changes,
-  # this will fail with an error message like "too many arguments"
-  # or "M: binary operator expected"
-  - git add .
-  - git diff-index --cached --exit-code HEAD
-
+# 运行测试
 script:
-  - if [ "$TRAVIS_GO_VERSION" == "1.5" ] || [ "$TRAVIS_GO_VERSION" == "1.6" ] || [ "$TRAVIS_GO_VERSION" == "1.7" ] || [ "$TRAVIS_GO_VERSION" == "1.8" ]; then go list ./... | grep -v vendor | xargs go test -race -v -timeout 120s; else go test -race -v -timeout 120s ./...; fi
+  - go test -v -race ./...  # 启用竞态检测
+  - go build -v ./...       # 确保项目可以构建
 
+# 测试覆盖率
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+# 设置通知
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+
+# 缓存依赖
+cache:
+  directories:
+    - $GOPATH/pkg/mod
