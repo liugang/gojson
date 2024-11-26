@@ -23,11 +23,11 @@ jobs:
       - name: Build Binaries
         run: |
           # Linux
-          GOOS=linux GOARCH=amd64 go build -o ./bin/app-linux-amd64
+          GOOS=linux GOARCH=amd64 go build -o ./bin/gojson-amd64
           # Windows
-          GOOS=windows GOARCH=amd64 go build -o ./bin/app-windows-amd64.exe
+          GOOS=windows GOARCH=amd64 go build -o ./bin/gojson-windows-amd64.exe
           # macOS
-          GOOS=darwin GOARCH=amd64 go build -o ./bin/app-darwin-amd64
+          GOOS=darwin GOARCH=amd64 go build -o ./bin/gojson-darwin-amd64
 
       # 自动生成更新日志
       - name: Generate Changelog
@@ -40,9 +40,9 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ./bin/app-linux-amd64
-            ./bin/app-windows-amd64.exe
-            ./bin/app-darwin-amd64
+            ./bin/gojson-linux-amd64
+            ./bin/gojson-windows-amd64.exe
+            ./bin/gojson-darwin-amd64
           body_path: CHANGELOG.md
           draft: false
           prerelease: false
