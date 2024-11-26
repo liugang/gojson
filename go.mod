@@ -1,6 +1,6 @@
 module github.com/liugang/gojson
 
-go 1.22.5
+go 1.18
 
 require (
 	github.com/ChimeraCoder/gojson v1.1.0
