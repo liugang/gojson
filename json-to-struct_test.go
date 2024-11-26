@@ -1,4 +1,4 @@
-package gojson
+package main
 
 import (
 	"io/ioutil"
