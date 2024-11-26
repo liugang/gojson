@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ChimeraCoder/gojson.svg?branch=master)](https://travis-ci.org/ChimeraCoder/gojson)
+[![Build Status](https://travis-ci.org/liugang/gojson.svg?branch=master)](https://travis-ci.org/liugang/gojson)
 gojson
 ======
 
@@ -8,7 +8,7 @@ Example
 ----------
 
 ```sh
-$ curl -s https://api.github.com/repos/chimeracoder/gojson | gojson --name=Repository
+$ curl -s https://api.github.com/repos/liugang/gojson | gojson --name=Repository
 
 package main
 
@@ -121,19 +121,19 @@ $ go test
 **Building CLI**
 
 ```
-$ go build -o _build/gojson ./gojson
+$ go build
 ```
 
 **Installing CLI**
 
 ```
-$ go install ./gojson
+$ go install
 ```
 
 **Formatting**
 
 ```
-$ gofmt -w -e -s -l .
+$ gofmt -w .
 ```
 
 Related Work
