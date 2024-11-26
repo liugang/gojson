@@ -8,7 +8,7 @@ Example
 ----------
 
 ```sh
-$ curl -s https://api.github.com/repos/chimeracoder/gojson | gojson -name=Repository
+$ curl -s https://api.github.com/repos/chimeracoder/gojson | gojson --name=Repository
 
 package main
 
@@ -104,24 +104,16 @@ CLI Installation
 ----------------
 
 ```sh
-$ go get github.com/ChimeraCoder/gojson/gojson
+go install github.com/liugang/gojson@latest
 ```
 
 Assuming `$GOPATH/bin` is in your `PATH`, you can now invoke `gojson` directly.
-
-
-API Installation
-----------------
-
-```sh
-$ go get github.com/ChimeraCoder/gojson/gojson
-```
 
 Development
 -----------
 
 ```
-$ git clone https://github.com/ChimeraCoder/gojson.git
+$ git clone https://github.com/liugang/gojson.git
 $ cd gojson
 $ go test
 ```
