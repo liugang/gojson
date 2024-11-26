@@ -4,7 +4,8 @@ language: go
 # 指定 Go 版本
 go:
   - 1.18.x
-  - 1.23.x
+  - 1.19.x
+  - 1.20.x
   - tip  # 最新开发版本
 
 # 操作系统
@@ -40,6 +41,8 @@ after_success:
 # 设置通知
 notifications:
   email:
+    recipients:
+      - galen.gang.liu@gmail.com
     on_success: never
     on_failure: always
 
