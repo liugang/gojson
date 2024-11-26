@@ -1,4 +1,10 @@
-[![Build Status](https://travis-ci.org/liugang/gojson.svg?branch=master)](https://travis-ci.org/liugang/gojson)
+# gojson
+
+[![GitHub Actions](https://github.com/liugang/gojson/actions/workflows/go.yml/badge.svg)](https://github.com/liugang/gojson/actions)
+[![codecov](https://codecov.io/gh/liugang/gojson/branch/master/graph/badge.svg)](https://codecov.io/gh/liugang/gojson)
+[![Go Report Card](https://goreportcard.com/badge/github.com/liugang/gojson)](https://goreportcard.com/report/github.com/liugang/gojson)
+[![GoDoc](https://godoc.org/github.com/liugang/gojson?status.svg)](https://godoc.org/github.com/liugang/gojson)
+
 gojson
 ======
 
