@@ -23,7 +23,7 @@ jobs:
       - name: Build Binaries
         run: |
           # Linux
-          GOOS=linux GOARCH=amd64 go build -o ./bin/gojson-amd64
+          GOOS=linux GOARCH=amd64 go build -o ./bin/gojson-linux-amd64
           # Windows
           GOOS=windows GOARCH=amd64 go build -o ./bin/gojson-windows-amd64.exe
           # macOS
