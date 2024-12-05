@@ -19,6 +19,7 @@ var (
 	fileType    string
 	forceFloats bool
 	subStruct   bool
+	intType     string
 )
 
 // rootCmd represents the base command
@@ -78,6 +79,10 @@ Example:
 			parser = ParseYaml
 		}
 
+		// Set global flags
+		forceFloats = cmd.Flag("forcefloats").Value.String() == "true"
+		intType = cmd.Flag("inttype").Value.String()
+
 		// Generate struct
 		output, err := Generate(input, parser, name, pkg, tagList, subStruct, convertFloats)
 		if err != nil {
@@ -106,6 +111,7 @@ func init() {
 	rootCmd.PersistentFlags().StringVarP(&tags, "tags", "t", "fmt", "comma separated list of the tags to put on the struct")
 	rootCmd.PersistentFlags().BoolVar(&forceFloats, "forcefloats", false, "[experimental] force float64 type for integral values")
 	rootCmd.PersistentFlags().BoolVarP(&subStruct, "substruct", "s", false, "create types for sub-structs")
+	rootCmd.PersistentFlags().StringVarP(&intType, "inttype", "T", "", "the type to use for integer values")
 }
 
 func main() {
